@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Pokemon{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+            <div class="about"> {{ post[2] }}</div>
+        </div>
+      </header>
+      <p class="body">{{ post[3] }}</p>
+        <p class="body">{{ post[4] }}</p>
+        <p class="body">{{ post[5] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+<form action="getPokemon">
+    <input type="submit" value="Download CSV">
+</form>
+{% endblock %}

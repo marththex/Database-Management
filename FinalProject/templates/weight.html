@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Filter Pokemon By Weight{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="minW">Min Weight (lbs)</label>
+    <input name="minW" id="minW" value="{{ request.form['minW'] }}" required>
+    <label for="maxW">Max Weight (lbs)</label>
+    <input name="maxW" id="maxW" value="{{ request.form['maxW'] }}" required>
+        <input type="submit" value="Apply">
+  {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+        </div>
+      </header>
+      <p class="body">Weight: {{ post[2] }} lbs</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+
+  </form>
+{% endblock %}

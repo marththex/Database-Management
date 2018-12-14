@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Stats{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+        </div>
+      </header>
+      <p class="body">HP: {{ post[2] }}</p>
+        <p class="body">Attack: {{ post[3] }}</p>
+        <p class="body">Defense: {{ post[4] }}</p>
+        <p class="body">Speed: {{ post[5] }}</p>
+        <p class="body">Special Attack: {{ post[6] }}</p>
+        <p class="body">Special Defense: {{ post[7] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+<form action="getStats">
+    <input type="submit" value="Download CSV">
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Welcome{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+      <form action="info">
+          <input type="submit" value="1. Print/Export Pokemon Info">
+      </form>
+      <form action="filter">
+      <input type="submit" value="2. Filter Pokemon Info">
+      </form>
+      <form action="create">
+          <input type="submit" value="3. Create a new Pokemon">
+      </form>
+      <form action="delete">
+          <input type="submit" value="4. Delete an existing Pokemon">
+      </form>
+      <form action="update">
+          <input type="submit" value="5. Update a Pokemon's Description">
+      </form>
+{% endblock %}

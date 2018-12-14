@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Profile{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+        </div>
+      </header>
+      <p class="body">Height: {{ post[2] }}</p>
+        <p class="body">Catch Rate: {{ post[3] }}</p>
+        <p class="body">Weight: {{ post[4] }} lbs</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+<form action="getProfile">
+    <input type="submit" value="Download CSV">
+</form>
+{% endblock %}

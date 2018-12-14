@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Filter Pokemon By Height{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="min">Min Height (in feet)</label>
+    <input name="min" id="min" value="{{ request.form['min'] }}" required>
+    <label for="max">Max Height (in feet)</label>
+    <input name="max" id="max" value="{{ request.form['max'] }}" required>
+        <input type="submit" value="Apply">
+  {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+        </div>
+      </header>
+      <p class="body">Height: {{ post[2] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+
+  </form>
+{% endblock %}

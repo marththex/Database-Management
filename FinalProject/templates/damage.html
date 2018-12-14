@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Damage When Attacked{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+            <h1>{{ post[0]}} {{ post[1] }}</h1>
+        </div>
+      </header>
+      <p class="body">Normal: {{ post[2] }}x</p>
+        <p class="body">Fire: {{ post[3] }}x</p>
+        <p class="body">Water: {{ post[4] }}x</p>
+        <p class="body">Electric: {{ post[5] }}x</p>
+        <p class="body">Grass: {{ post[6] }}x</p>
+        <p class="body">Ice: {{ post[7] }}x</p>
+        <p class="body">Fighting: {{ post[8] }}x</p>
+        <p class="body">Poison: {{ post[9] }}x</p>
+        <p class="body">Ground: {{ post[10] }}x</p>
+        <p class="body">Flying: {{ post[11] }}x</p>
+        <p class="body">Psychic: {{ post[12] }}x</p>
+        <p class="body">Bug: {{ post[13] }}x</p>
+        <p class="body">Rock: {{ post[14] }}x</p>
+        <p class="body">Ghost: {{ post[15] }}x</p>
+        <p class="body">Dragon: {{ post[16] }}x</p>
+        <p class="body">Dark: {{ post[17] }}x</p>
+        <p class="body">Steel: {{ post[18] }}x</p>
+        <p class="body">Fairy: {{ post[19] }}x</p>
+
+
+
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+<form action="getDamage">
+    <input type="submit" value="Download CSV">
+</form>
+{% endblock %}

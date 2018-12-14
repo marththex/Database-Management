@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}What table would you like to print out?{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form action="index">
+    <input type="submit" value = "Pokemon" name="Pokemon">
+  </form>
+  <form action="profile">
+      <input type="submit" value= "Profile" name="Profile">
+  </form>
+    <form action="stats">
+      <input type="submit" value= "Stats" name="Stats">
+    </form>
+    <form action="damage">
+      <input type="submit" value= "Damage Multiplier" name="Damage Multiplier">
+    </form>
+
+{% endblock %}

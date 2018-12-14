@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Pokemon{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="id">ID</label>
+    <input name="id" id="id" value="{{ request.form['id'] }}" required>
+    <label for="name">Name</label>
+    <input name="name" id="name" value="{{ request.form['name'] }}">
+    <label for="about">About</label>
+    <input name="about" id="about" value="{{ request.form['about'] }}">
+    <label for="name">Description</label>
+    <input name="description" id="description" value="{{ request.form['description'] }}">
+    <label for="type">Type</label>
+    <input name="type" id="type" value="{{ request.form['type'] }}">
+    <label for="height">Height</label>
+    <input name="height" id="height" value="{{ request.form['height'] }}">
+    <label for="catchrate">Catch Rate</label>
+    <input name="catchrate" id="catchrate" value="{{ request.form['catchrate'] }}">
+    <label for="weight">Weight</label>
+    <input name="weight" id="weight" value="{{ request.form['weight'] }}">
+    <label for="ability">Ability</label>
+    <input name="ability" id="ability" value="{{ request.form['ability'] }}">
+    <label for="hp">HP</label>
+    <input name="hp" id="hp" value="{{ request.form['hp'] }}">
+    <label for="attack">Attack</label>
+    <input name="attack" id="attack" value="{{ request.form['attack'] }}">
+    <label for="defense">Defense</label>
+    <input name="defense" id="defense" value="{{ request.form['defense'] }}">
+    <label for="speed">Speed</label>
+    <input name="speed" id="speed" value="{{ request.form['speed'] }}">
+    <label for="spatk">Special Attack</label>
+    <input name="spatk" id="spatk" value="{{ request.form['spatk'] }}">
+    <label for="spdef">Special Defense</label>
+    <input name="spdef" id="spdef" value="{{ request.form['spdef'] }}">
+    <label for="evolution">Evolution ID:</label>
+    <input name="evolution" id="evolution" value="{{ request.form['evolution'] }}">
+    <label for="nor">Normal Damage</label>
+    <input name="nor" id="nor" value="{{ request.form['nor'] }}">
+    <label for="fir">Fire Damage</label>
+    <input name="fir" id="fir" value="{{ request.form['fir'] }}">
+    <label for="wat">Water Damage</label>
+    <input name="wat" id="wat" value="{{ request.form['wat'] }}">
+    <label for="ele">Electric Damage</label>
+    <input name="ele" id="ele" value="{{ request.form['ele'] }}">
+    <label for="gra">Grass Damage</label>
+    <input name="gra" id="gra" value="{{ request.form['gra'] }}">
+    <label for="ice">Ice Damage</label>
+    <input name="ice" id="ice" value="{{ request.form['ice'] }}">
+    <label for="fig">Fighting Damage</label>
+    <input name="fig" id="fig" value="{{ request.form['fig'] }}">
+    <label for="poi">Poison Damage</label>
+    <input name="poi" id="poi" value="{{ request.form['poi'] }}">
+    <label for="gro">Ground Damage</label>
+    <input name="gro" id="gro" value="{{ request.form['gro'] }}">
+    <label for="fly">Flying Damage</label>
+    <input name="fly" id="fly" value="{{ request.form['fly'] }}">
+    <label for="psy">Psychic Damage</label>
+    <input name="psy" id="psy" value="{{ request.form['psy'] }}">
+    <label for="bug">Bug Damage</label>
+    <input name="bug" id="bug" value="{{ request.form['bug'] }}">
+    <label for="roc">Rock Damage</label>
+    <input name="roc" id="roc" value="{{ request.form['roc'] }}">
+    <label for="gho">Ghost Damage</label>
+    <input name="gho" id="gho" value="{{ request.form['gho'] }}">
+    <label for="dra">Dragon Damage</label>
+    <input name="dra" id="dra" value="{{ request.form['dra'] }}">
+    <label for="dar">Dark Damage</label>
+    <input name="dar" id="dar" value="{{ request.form['dar'] }}">
+    <label for="ste">Steel Damage</label>
+    <input name="ste" id="ste" value="{{ request.form['ste'] }}">
+     <label for="fai">Fairy Damage</label>
+    <input name="fai" id="fai" value="{{ request.form['fai'] }}">
+
+    <input type="submit" value="Save">
+
+  </form>
+{% endblock %}

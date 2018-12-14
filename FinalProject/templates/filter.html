@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}How would you like to filter/sort the Pokemon data?{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+      <form action="name">
+          <input type="submit" value="1. By Name">
+      </form>
+      <form action="type">
+          <input type="submit" value="2. By Type">
+      </form>
+      <form action="height">
+          <input type="submit" value="3. By Height">
+      </form>
+      <form action="catchrate">
+          <input type="submit" value="4. By Catch Rate">
+      </form>
+      <form action="weight">
+          <input type="submit" value="5. By Weight">
+      </form>
+      <form action="hp">
+          <input type="submit" value="6. By HP">
+      </form>
+      <form action="attack">
+          <input type="submit" value="7. By Attack">
+      </form>
+      <form action="defense">
+          <input type="submit" value="8. By Defense">
+      </form>
+      <form action="speed">
+          <input type="submit" value="9. By Speed">
+      </form>
+      <form action="spatk">
+          <input type="submit" value="10. By Special Attack">
+      </form>
+      <form action="spdef">
+          <input type="submit" value="11. By Special Defense">
+      </form>
+      <form action="ability">
+          <input type="submit" value="12. By Ability">
+      </form>
+      <form action="evolution">
+          <input type="submit" value="13. By Evolution">
+      </form>
+
+{% endblock %}
