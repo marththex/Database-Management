@@ -1,6 +1,8 @@
 # Database-Management
 CPSC 408 Database Management
 
+Final Project:
+
 This is an application made using flask in python. It communicates with a mysql database to store, filter, print, and download pokemon data.
 
 To run the application you will need to install the following python3 libraries
